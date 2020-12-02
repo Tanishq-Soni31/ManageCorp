@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>login</title>
+  </head>
+  <body>
+    <h1> Login</h1>
+    <div id="login">
+      <% let route = "/login" + user %>
+      <form id="login_form" action="<%= route%>" method="POST">
+        <div class="field_container">
+          <input type="text" class="form-control" name="username" required placeholder="Username">
+        </div>
+
+        <div class="field_container">
+          <input type="Password" class="form-control" name="password" required placeholder="Password">
+          <button id="sign_in_button" type="submit">
+            <span class="button_text">Sign In</span>
+          </button>
+        </div>
+
+
+    </form>
+      <div id="dont_have_an_account">
+        <h2>
+            <% let regroute = "/register" + user %>
+          Need to <a href="<%= regroute%>" class="login_link">sign up</a> for an account
+
+        </h2>
+      </div>
+    </div>
+
+  </body>
+</html>

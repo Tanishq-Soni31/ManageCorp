@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <br><br><br><br
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Taylor’s Professional Services (TPS)</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About TPS</a>
+        </li>
+        <p style="text-align:right;">
+        <li class="nav-item" style="text-align:right;">
+           <a class="nav-link" href="/clilogout">Logout</a>
+          </li>
+        </p>
+      </ul>
+
+    </div>
+  </nav>
+</header>
+<center><h1><strong>STAFFING REQUESTS</strong></h1></center>
+<div class="pure-g">
+  <% jobs.forEach((job)=>{ %>
+
+
+    <div class="pure-u-1-3"><div class="col-md-4">
+              <div class="card mb-4 shadow-sm" style="width: 30rem;">
+
+                <div class="card-body" style="width: 30rem;" >
+                  <ul class="card-text">
+                    <li>Job Title : <%= job.title %> </li>
+                    <li>Job Type : <%= job.type%></li>
+                    <li>Location  : <%= job.location %></li>
+                    <li>Salary    : $<%= job.salary %></li>
+                    <li>Duration    : <%= job.duration %></li>
+                    <li>Company Name : <%= job.companyname %></li>
+                    <li>Company Contact : <%= job.companycontact%></li>
+                    <!-- <li>Employs Selected: <br>
+                        <ul>
+                            <%job.applicants.forEach((emp) =>{%>
+                                <li><%=emp.name%></li>
+                            <%})%>
+                        </ul></li> -->
+                    <li>Status    :  <%= job.status %>  </li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <% let route = "/editreq/" + job._id + "/" + id%>
+                        <a href="<%=route%>">    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>   </a>
+                          <% let routedel = "/deletereq/" + job._id + "/" + id%>
+                <a href="<%=routedel%>">      <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>  </a>
+
+                    </div>
+                    <!-- <small class="text-muted"> Date: 12/12/12</small> -->
+                  </div>
+                </div>
+              </div>
+            </div></div>
+
+
+         <%})%>
+</div>
+<!-- <div class="pure-g">
+
+    <div class="pure-u-1-3 pure-u-md-1-2 pure-u-lg-1-4"><div> -->
+        <% let route = "/staffreq/" + id%>
+        <center><a href = "<%= route %>">
+            <button type="button" class="btn btn-dark">
+                Create New Staffing Request
+            </button>
+        </a></center>
+    </div></div>
+<!-- </div> -->
+
+<br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

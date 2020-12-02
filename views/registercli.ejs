@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Employee Register</title>
+  </head>
+  <body>
+    <h1>Client Register</h1>
+    <div id="login">
+      <form id="login_form" action="/registercli" method="POST">
+        <div class="field_container">
+          <input type="text" class="form-control" name="username" required placeholder="Username">
+        </div>
+        <div class="field_container">
+            <input type="text" class="form-control" name="name" required placeholder="name">
+          </div>
+        <div class="field_container">
+          <input type="password" class="form-control" name="password" required placeholder="password">
+        </div>
+        <div class="field_container">
+          <input type="email" class="form-control" name="email" required placeholder="email">
+        </div>
+        <div class="field_container">
+            <input type="text" class="form-control" name="companyname" required placeholder="companyname">
+          </div>
+          <div class="field_container">
+            <input type="number" class="form-control" name="companycontact" required placeholder="companycontact">
+          </div>
+        <div class="field_container" style="text-align:center;">
+
+          <button id="sign_in_button" type="submit">
+
+            <span class="button_text">Register</span>
+          </button>
+        </div>
+
+
+    </form>
+
+    </div>
+
+  </body>
+</html>

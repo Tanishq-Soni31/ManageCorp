@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  
+    <title>Update Resume</title>
+  </head>
+  <body>
+    <h1> Update Resume</h1>
+    <div id="login">
+    <% let route = "/resumeupdate/" + resumes._id %>
+    <form id="login_form" action="/registerEmp" method="POST" enctype="multipart/form-data">
+        <div class="field_container">
+          <input type="text" class="form-control" name="username" required placeholder="Username">
+        </div>
+        <div class="field_container">
+            <input type="text" class="form-control" name="name" required placeholder="name">
+        </div>
+        <div class="field_container">
+          <input type="password" class="form-control" name="password" required placeholder="password">
+        </div>
+        <div class="field_container">
+          <input type="email" class="form-control" name="email" required placeholder="email">
+        </div>
+        <div class="field_container">
+          <input type="text" class="form-control" name="experience" required placeholder="experience">
+        </div>
+        <div class="field_container">
+            <input type="text" class="form-control" name="skills" required placeholder="skills">
+        </div>
+        <div class="field_container">
+          <input type="text" class="form-control" name="emp_edu" required placeholder="Employee Education">
+        </div>
+        <div class="field_container">
+          <input type="number" class="form-control" name="emp_salary" required placeholder="Employee Salary">
+        </div>
+        <div class="field_container">
+          <input type="text" class="form-control" name="location" required placeholder="location ">
+        </div>
+        <div class="field_container">
+          <input type="number" class="form-control" name="phone" required placeholder="Employee Contact Number">
+        </div>
+        <div class="field_container">
+          <input type="text" class="form-control" name="availability" required placeholder="availability">
+        </div>
+        <div class="field_container">
+            <input type="file" class="form-control" name="imageemp" required>
+          </div>
+      <div class="field_container" style="text-align:center;">
+<h3>Note : These details will be added as your Resume</h3>
+        <button id="sign_in_button" type="submit">
+          <span class="button_text">Update Resume</span>
+        </button>
+
+      </div>
+  </form>
+    </div>
+  </body>
+</html>
